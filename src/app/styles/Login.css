@@ -1,0 +1,60 @@
+.login-page{
+    background: linear-gradient(#57A3E0,#30597A);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.login-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-logo{
+    width: 8rem;
+    height: 8rem;
+    margin-top: 0.5rem;
+}
+
+.login-name{
+    font-size: 2rem;
+}
+
+.login-header{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.login-desc{
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#patient-id{
+    width: 250px;
+    margin-top: 1rem;
+    color: #356f9e;
+    text-align: center;
+    border: none;
+}
+
+.login-submit{
+    color: white;
+    font-size: 1.25rem;
+    border: 2px solid white;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    width: 250px;
+    border-radius: 0.5rem;
+}

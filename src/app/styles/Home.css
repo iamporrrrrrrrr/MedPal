@@ -1,0 +1,224 @@
+.home-page{
+    background-color: #F5F9FF;
+    position: relative;
+}
+
+.home-top{
+    width: 100%;
+    background-image: linear-gradient(#5294C9,#57A3E0);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.home-top-top{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125rem;
+}
+
+.profile-container{
+    display: flex;
+    position: absolute;
+    left: 0;
+    margin-left: 1.5rem;
+}
+
+
+.profile{
+    width: 3rem;
+    height: 3rem;
+    fill: white;
+}
+
+.name-container{
+    background-color: white;
+    color: #607FA3;
+    padding: 0.8rem 3rem;
+    border-radius: 1.5rem;
+}
+
+.clock-container{
+    width: 100%;
+    text-align: center;
+    margin: 1.5rem 0 2rem;
+}
+
+.clock-time{
+    font-size: 6.25rem;
+}
+
+.clock-date{
+    font-size: 1.5rem;
+}
+
+.home-bottom{
+    color: #607FA3;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+.home-bottom>span{
+    font-size: 1.125rem;
+}
+
+.to-list-container{
+    background-color: #57A3E0;
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+.to-list-container:hover{
+    background-color: #4e94cd;
+}
+
+.to-list{
+    width: 3rem;
+    height: 3rem;
+}
+
+.alarm{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 0.75rem;
+}
+
+.alarm-list{
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0rem 0.5rem 1.5rem; 
+    display: flex;
+    position: relative;
+    border-radius: 1rem;
+    border-left: 1rem solid;
+    border-color: #4E9DDD;
+}
+.alarm-left{
+    display: flex;
+    flex-direction: column;
+    min-width: 60%;
+    max-width: 60%;
+}
+
+.alarm-header{
+    font-size: 1rem;
+}
+
+.alarm-time{
+    font-size: 3.125rem;
+}
+
+.ver-line{
+    width: 0px;
+    height: 75px;
+    border: 0;
+    border-left: 1px solid #DCDCDC;
+    margin-inline: 0;
+}
+
+.alarm-text{
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
+    height: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.sidebar-page{
+    background-color: #D9D9D966;
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-container{
+    width: 70%;
+    height: 100%;
+    background-color: #F5F9FF;
+}
+
+.sidebar-close-icon-container{
+    width: 3rem;
+    height: 3rem;
+}
+
+.sidebar-close{
+    color:#607FA3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+}
+
+.sidebar-img-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.sidebar-img-container{
+    width: 10rem;
+    height: 10rem;
+}
+
+.sidebar-img{
+    border-radius: 50%;
+    border: 2px solid #57A3E0;
+    background-color: white;
+}
+
+.sidebar-name{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #607FA3;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-logout-container{
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-left: 0.75rem;
+}
+
+.sidebar-icon-container{
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1.25rem;
+    margin-left: 1rem;
+}
+
+.sidebar-option{
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    color: #607FA3;
+    padding: 0.75rem 0;
+}
+
+.sidebar-option:hover{
+    background-color: #d9e1ed;
+}

@@ -1,0 +1,112 @@
+.medicine-page{
+    background-color: white;
+    padding: 1rem;
+}
+
+.med-top{
+    color: #7E7E7E;
+    font-size: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+button{
+    background: none;
+    border: none;
+}
+
+.med-top>button{
+    margin-right: 1.5rem;
+}
+
+.med-top>button>img{
+    width: 2rem;
+    height: 2rem;
+}
+
+hr{
+    width: 100%;
+    border-top: 1px solid #DCDCDC;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.list-container{
+    height: 100%;
+    color: #7E7E7E;
+}
+
+.list-element{
+    height: 80px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+}
+
+.list-tube{
+    font-size: 1.25;
+    color: #D2D2D2;
+}
+
+.list-main{
+    display: flex;
+    align-items: center;
+}
+
+.list-main>span{
+    font-size: 2rem;
+    color: #5294C9;
+}
+
+.trash{
+    width: 2rem;
+    height: 2rem;
+}
+
+.right-arrow{
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%,-50%);
+}
+
+.edit-btn{
+    background-color: #5294C9;
+    padding: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    right: 1rem;
+}
+
+.edit-btn:hover{
+    background-color: #427dae;
+}
+
+.to-home-container{
+    background-color: #57A3E0;
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+.to-home-container:hover{
+    background-color: #4e94cd;
+}
+
+.to-home{
+    width: 3rem;
+    height: 3rem;
+}

@@ -1,0 +1,128 @@
+[
+    {
+        "id": "P001",
+        "name": "Mr John Smith",
+        "meds": [
+            {
+                "id": "ds123123x1w",
+                "info": {
+                    "Name": "Paracetamol",
+                    "Type": "Pill",
+                    "Dosage": "1",
+                    "Interval": "1",
+                    "Duration": "7",
+                    "Instruction": "Take with a lot of water after meals",
+                    "Description": "Helps relieve headaches and migraine",
+                    "Time": ["12:00", "18:00"],
+                    "Tube": 1,
+                    "Take": false
+                }
+            }
+        ],
+        "emptyTubes": [2, 3, 4, 5, 6, 7, 8]
+    },
+    {
+        "id": "P002",
+        "name": "Ms Jane Doe",
+        "meds": [
+            {
+                "id": "as564789y2z",
+                "info": {
+                    "Name": "Ibuprofen",
+                    "Type": "Pill",
+                    "Dosage": "2",
+                    "Interval": "1",
+                    "Duration": "5",
+                    "Instruction": "Take with food to avoid stomach upset",
+                    "Description": "Reduces inflammation and pain",
+                    "Time": ["08:00", "16:00"],
+                    "Tube": 2,
+                    "Take": false
+                }
+            },
+            {
+                "id": "xc987654t1q",
+                "info": {
+                    "Name": "Amoxicillin",
+                    "Type": "Capsule",
+                    "Dosage": "1",
+                    "Interval": "1",
+                    "Duration": "10",
+                    "Instruction": "Take with water, avoid dairy products",
+                    "Description": "Antibiotic to treat infection",
+                    "Time": ["09:00", "21:00"],
+                    "Tube": 3,
+                    "Take": false
+                }
+            },
+            {
+                "id": "nm789123d4e",
+                "info": {
+                    "Name": "Cetirizine",
+                    "Type": "Tablet",
+                    "Dosage": "1",
+                    "Interval": "1",
+                    "Duration": "7",
+                    "Instruction": "Take before sleep if prone to drowsiness",
+                    "Description": "For allergy relief",
+                    "Time": ["22:00"],
+                    "Tube": 4,
+                    "Take": false
+                }
+            }
+        ],
+        "emptyTubes": [1, 5, 6, 7, 8]
+    },
+    {
+        "id": "P003",
+        "name": "Mr Alan Brown",
+        "meds": [
+            {
+                "id": "df453678y2x",
+                "info": {
+                    "Name": "Lisinopril",
+                    "Type": "Tablet",
+                    "Dosage": "1",
+                    "Interval": "1",
+                    "Duration": "30",
+                    "Instruction": "Take at the same time every day",
+                    "Description": "For managing blood pressure",
+                    "Time": ["08:00"],
+                    "Tube": 1,
+                    "Take": false
+                }
+            },
+            {
+                "id": "fg234567u3v",
+                "info": {
+                    "Name": "Metformin",
+                    "Type": "Tablet",
+                    "Dosage": "1",
+                    "Interval": "1",
+                    "Duration": "60",
+                    "Instruction": "Take with meals to lower blood sugar",
+                    "Description": "For type 2 diabetes management",
+                    "Time": ["08:00", "20:00"],
+                    "Tube": 2,
+                    "Take": false
+                }
+            },
+            {
+                "id": "kl123890n5m",
+                "info": {
+                    "Name": "Atorvastatin",
+                    "Type": "Tablet",
+                    "Dosage": "1",
+                    "Interval": "1",
+                    "Duration": "30",
+                    "Instruction": "Take at night for cholesterol management",
+                    "Description": "Lowers cholesterol levels",
+                    "Time": ["21:00"],
+                    "Tube": 3,
+                    "Take": false
+                }
+            }
+        ],
+        "emptyTubes": [4, 5, 6, 7, 8]
+    }
+]

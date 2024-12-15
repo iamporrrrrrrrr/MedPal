@@ -1,0 +1,129 @@
+.config-page{
+    background-color: white;
+    font-size: 1.5rem;
+    color: #5294C9;
+    position: relative;
+}
+
+.form-content{
+    width: 100%;
+    padding: 1rem;
+}
+
+.form-row{
+    margin-bottom: 0.5rem;
+}
+
+.form-name,.form-instruction,.form-description,.form-time{
+    display: flex;
+    flex-direction: column;
+}
+
+input, select,textarea{
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    color: #7E7E7E;
+    outline: none;
+    border: 1px solid #D2D2D2;
+    border-radius: 0.5rem;
+    padding-left: 1rem
+}
+
+#dosage,#interval,#duration{
+    width: 4rem;
+}
+
+.form-subtext-days{
+    color: #D2D2D2;
+    font-size: 1.25rem;
+}
+
+textarea{
+    font-size: 1.125rem;
+    padding-left: 0.5rem;
+}
+
+.form-name>label,.form-instruction>label,.form-description > label,.form-time>span{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.form-type,.form-dosage,.form-interval,.form-duration{
+    display: flex;
+    justify-content: space-between;
+}
+
+#name{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.form-footer{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.form-cancel{
+    flex-grow: 1;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: #5294C9;
+    border: 1px solid #D2D2D2;
+}
+
+.form-submit{
+    flex-grow: 1;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #5294C9;
+    padding: 0.5rem;
+}
+
+.dynamic-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.dynamic-input{
+    background-color: #5294C9;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    padding-inline: 0.5rem;
+    border-radius: 1.5rem;
+}
+
+.dynamic-input>button{
+    color: white;
+}
+
+.dynamic-input>input{
+    border: none;
+    outline: none;
+    background-color: #5294C9;
+    border-radius: 1.5rem;
+    color: white;
+}
+
+.dynamic-add{
+    background-color: #5294C9;
+    color: white;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+input[type="time"]::-webkit-calendar-picker-indicator { 
+    display: none; 
+}
