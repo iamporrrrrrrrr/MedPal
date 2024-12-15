@@ -32,8 +32,8 @@ export default function Home(){
         <div className='page home-page'>
             <div className="home-top">   
                 <div className='home-top-top'>
-                    <div className='profile-container'>
-                        <img src="./assets/user-solid.svg" alt="" className='profile' onClick={()=>setOpenSidebar(true)}/> 
+                    <div className='profile-container' onClick={()=>setOpenSidebar(true)}>
+                        <Image src="/assets/user-solid.svg" alt="" className='profile'  layout="responsive" width={1} height={1}/> 
                     </div>
                     <span className="name-container">{patientInfo.name.toUpperCase()}</span>
                 </div>    

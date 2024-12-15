@@ -22,7 +22,7 @@ export default function AddDynamicInputFields({curMed, setCurMed}) {
         <span> Time </span>
         <div className="dynamic-container">
           {curMed.Time.map((item, index) => (
-              <>
+              <div className = "dynamic-container-child" key={index}>
                 <div className="dynamic-input" key={index}>
                   <input
                       name="time"
@@ -40,7 +40,7 @@ export default function AddDynamicInputFields({curMed, setCurMed}) {
                         +
                       </button>
                   )}
-              </>
+              </div>
           ))}
         </div>
         

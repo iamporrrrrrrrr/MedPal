@@ -34,9 +34,9 @@ export default function Medicine(){
             <hr/>
             <div className="list-container">
                 {patientInfo.meds.length==0 && "No Pending Medicine"}
-                {patientInfo.meds.sort(function(a,b) {return a.info.Tube-b.info.Tube}).map(med => {
+                {patientInfo.meds.map((med,index) => {
                     return (
-                        <>
+                        <div key = {index}>
                             <div className="list-element" key={med.info.Name}>
                                 <div className="list-tube">Tube {med.info.Tube}</div>
                                 <div className="list-main">
@@ -60,7 +60,7 @@ export default function Medicine(){
                                 </div>
                             </div>
                             <hr/>
-                        </>
+                        </div>
                     )
                 })}
             </div>

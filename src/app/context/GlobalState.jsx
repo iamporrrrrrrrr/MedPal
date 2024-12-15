@@ -59,13 +59,13 @@ export function GlobalStateProvider({ children }) {
 
   const addMed = (medInfo) => {
     setPatientInfo((e) => {
-      return {...patientInfo, meds: [...e.meds.filter((todo) => todo.info.Name !== medInfo.Name), { id: crypto.randomUUID(), info: medInfo }], emptyTubes: e.emptyTubes.filter((e) => e !== medInfo.Tube)};
+      return {...patientInfo, meds: [...e.meds.filter((todo) => todo.info.Name !== medInfo.Name), { id: crypto.randomUUID(), info: medInfo }], emptyTubes: e.emptyTubes.filter((e) => e !== medInfo.Tube).sort()};
     });
   };
 
   const deleteMed = (medInfo) => {
     setPatientInfo((e) => {
-      return {...patientInfo, meds: e.meds.filter((todo) => todo.info !== medInfo), emptyTubes: [...e.emptyTubes, medInfo.Tube]};
+      return {...patientInfo, meds: e.meds.filter((todo) => todo.info !== medInfo), emptyTubes: ([...e.emptyTubes, medInfo.Tube]).sort()};
     });
   };
 
