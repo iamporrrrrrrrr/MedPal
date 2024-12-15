@@ -5,8 +5,11 @@ export const GlobalStateContext = createContext();
 
 export function GlobalStateProvider({ children }) {
   const [patientInfo, setPatientInfo] = useState(() => {
-    const localValue = localStorage.getItem('PATIENTINFO');
-    return localValue ? JSON.parse(localValue) : { id: '', name: '', meds:[], emptyTubes: [1,2,3,4,5,6,7,8] };
+    if (typeof window !== 'undefined'){
+      const localValue = localStorage.getItem('PATIENTINFO');
+      return localValue ? JSON.parse(localValue) : { id: '', name: '', meds:[], emptyTubes: [1,2,3,4,5,6,7,8] };
+    }
+    return { id: '', name: '', meds:[], emptyTubes: [1,2,3,4,5,6,7,8] };
   });
 
   // const [meds, setMeds] = useState(() => {
@@ -15,13 +18,19 @@ export function GlobalStateProvider({ children }) {
   // });
 
   const [isSignedIn, setIsSignedIn] = useState(() => {
-    const localValue = localStorage.getItem('ISSIGNEDIN');
-    return localValue ? JSON.parse(localValue) : false;
+    if (typeof window !== 'undefined'){
+      const localValue = localStorage.getItem('ISSIGNEDIN');
+      return localValue ? JSON.parse(localValue) : false;
+    }
+    return false;
   });
 
   const [curMed, setCurMed] = useState(() => {
+    if (typeof window !== 'undefined'){
     const localValue = localStorage.getItem('CURMED');
     return localValue ? JSON.parse(localValue) : { Name: '', Type: '', Dosage: '', Interval: '', Duration: '', Instruction: '', Description: '', Time: [''], Tube: 0 };
+    }
+    return { Name: '', Type: '', Dosage: '', Interval: '', Duration: '', Instruction: '', Description: '', Time: [''], Tube: 0 };
   });
 
   // const [emptyTubes, setEmptyTubes] = useState(() => {
@@ -38,7 +47,7 @@ export function GlobalStateProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('PATIENTINFO', JSON.stringify(patientInfo));
+    if (typeof window !== 'undefined') localStorage.setItem('PATIENTINFO', JSON.stringify(patientInfo));
   }, [patientInfo]);
 
   // useEffect(() => {
@@ -46,11 +55,11 @@ export function GlobalStateProvider({ children }) {
   // }, [meds]);
 
   useEffect(() => {
-    localStorage.setItem('ISSIGNEDIN', JSON.stringify(isSignedIn));
+    if (typeof window !== 'undefined') localStorage.setItem('ISSIGNEDIN', JSON.stringify(isSignedIn));
   }, [isSignedIn]);
 
   useEffect(() => {
-    localStorage.setItem('CURMED', JSON.stringify(curMed));
+    if (typeof window !== 'undefined') localStorage.setItem('CURMED', JSON.stringify(curMed));
   }, [curMed]);
 
   // useEffect(() => {
