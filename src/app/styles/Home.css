@@ -26,13 +26,8 @@
     position: absolute;
     left: 0;
     margin-left: 1.5rem;
-}
-
-
-.profile{
-    width: 3rem;
     height: 3rem;
-    fill: white;
+    width: 3rem;
 }
 
 .name-container{

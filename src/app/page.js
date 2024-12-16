@@ -32,7 +32,7 @@ export default function Login(){
     })
     if(patient){
       setIsSignedIn(true)
-      setPatientInfo({id:patient.id, name:patient.name, meds:patient.meds, emptyTubes: patient.emptyTubes})
+      setPatientInfo(patient)
       router.push("/Home")
     }
   }

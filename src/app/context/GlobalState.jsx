@@ -5,10 +5,10 @@ export const GlobalStateContext = createContext();
 
 export function GlobalStateProvider({ children }) {
   const [patientInfo, setPatientInfo] = useState(() => {
-    if (typeof window !== 'undefined'){
-      const localValue = localStorage.getItem('PATIENTINFO');
-      return localValue ? JSON.parse(localValue) : { id: '', name: '', meds:[], emptyTubes: [1,2,3,4,5,6,7,8] };
-    }
+    // if (typeof window !== 'undefined'){
+    //   const localValue = localStorage.getItem('PATIENTINFO');
+    //   return localValue ? JSON.parse(localValue) : { id: '', name: '', meds:[], emptyTubes: [1,2,3,4,5,6,7,8] };
+    // }
     return { id: '', name: '', meds:[], emptyTubes: [1,2,3,4,5,6,7,8] };
   });
 
@@ -18,18 +18,18 @@ export function GlobalStateProvider({ children }) {
   // });
 
   const [isSignedIn, setIsSignedIn] = useState(() => {
-    if (typeof window !== 'undefined'){
-      const localValue = localStorage.getItem('ISSIGNEDIN');
-      return localValue ? JSON.parse(localValue) : false;
-    }
+    // if (typeof window !== 'undefined'){
+    //   const localValue = localStorage.getItem('ISSIGNEDIN');
+    //   return localValue ? JSON.parse(localValue) : false;
+    // }
     return false;
   });
 
   const [curMed, setCurMed] = useState(() => {
-    if (typeof window !== 'undefined'){
-    const localValue = localStorage.getItem('CURMED');
-    return localValue ? JSON.parse(localValue) : { Name: '', Type: '', Dosage: '', Interval: '', Duration: '', Instruction: '', Description: '', Time: [''], Tube: 0 };
-    }
+    // if (typeof window !== 'undefined'){
+    // const localValue = localStorage.getItem('CURMED');
+    // return localValue ? JSON.parse(localValue) : { Name: '', Type: '', Dosage: '', Interval: '', Duration: '', Instruction: '', Description: '', Time: [''], Tube: 0 };
+    // }
     return { Name: '', Type: '', Dosage: '', Interval: '', Duration: '', Instruction: '', Description: '', Time: [''], Tube: 0 };
   });
 
@@ -43,6 +43,14 @@ export function GlobalStateProvider({ children }) {
   // Synchronize states with localStorage
   useEffect(() => {
     const intervalId = setInterval(() => setTime(new Date()), 1000);
+    if (typeof window !== 'undefined'){
+      const localCurMed = localStorage.getItem('CURMED');
+      setCurMed(localCurMed ? JSON.parse(localCurMed) : { Name: '', Type: '', Dosage: '', Interval: '', Duration: '', Instruction: '', Description: '', Time: [''], Tube: 0 })
+      const localIsSignedIn = localStorage.getItem('ISSIGNEDIN');
+      setIsSignedIn(localIsSignedIn ? JSON.parse(localIsSignedIn) : false)
+        const localPatientInfo = localStorage.getItem('PATIENTINFO');
+        setPatientInfo(localPatientInfo ? JSON.parse(localPatientInfo) : { id: '', name: '', meds:[], emptyTubes: [1,2,3,4,5,6,7,8] })
+      }
     return () => clearInterval(intervalId);
   }, []);
 

@@ -2,6 +2,9 @@
     {
         "id": "P001",
         "name": "Mr John Smith",
+        "dob": "2004-01-02",
+        "sex": "Male",
+        "medicalInfo": "Mild headache",
         "meds": [
             {
                 "id": "ds123123x1w",
@@ -24,6 +27,9 @@
     {
         "id": "P002",
         "name": "Ms Jane Doe",
+        "dob": "2004-01-02",
+        "sex": "Female",
+        "medicalInfo": "Mild headache",
         "meds": [
             {
                 "id": "as564789y2z",
@@ -76,6 +82,9 @@
     {
         "id": "P003",
         "name": "Mr Alan Brown",
+        "dob": "2004-01-02",
+        "sex": "Male",
+        "medicalInfo": "Mild headache",
         "meds": [
             {
                 "id": "df453678y2x",
