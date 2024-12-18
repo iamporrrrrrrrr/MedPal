@@ -1,0 +1,76 @@
+.register-page{
+    background-color: white;
+    font-size: 1.5rem;
+    color: #5294C9;
+    position: relative;
+}
+
+.form-content{
+    width: 100%;
+    padding: 1rem;
+}
+
+.form-row{
+    margin-bottom: 0.5rem;
+}
+
+.form-name,.form-medicalInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+input, select,textarea{
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    color: #7E7E7E;
+    outline: none;
+    border: 1px solid #D2D2D2;
+    border-radius: 0.5rem;
+    padding-left: 1rem
+}
+
+textarea{
+    font-size: 1.125rem;
+    padding-left: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.form-name>label,.form-medicalInfo>label,.form-description > label{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.form-sex,.form-dob{
+    display: flex;
+    justify-content: space-between;
+}
+
+#name{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.form-footer{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.form-cancel{
+    flex-grow: 1;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: #5294C9;
+    border: 1px solid #D2D2D2;
+}
+
+.form-submit{
+    flex-grow: 1;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #5294C9;
+    padding: 0.5rem;
+}

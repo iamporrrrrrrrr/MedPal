@@ -1,9 +1,9 @@
-.medicine-page{
+.manage-page{
     background-color: white;
     padding: 1rem;
 }
 
-.med-top{
+.manage-top{
     color: #7E7E7E;
     font-size: 1.75rem;
     display: flex;
@@ -16,7 +16,7 @@ button{
     border: none;
 }
 
-.med-top>button{
+.manage-top>button{
     margin-right: 1.5rem;
     width: 3rem;
     height: 3rem;
@@ -34,11 +34,12 @@ hr{
     color: #7E7E7E;
 }
 
-.list-element{
+.manage-list-element{
     height: 80px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     position: relative;
+    display: flex;
 }
 
 .list-tube{
@@ -52,7 +53,7 @@ hr{
 }
 
 .list-main>span{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #5294C9;
 }
 

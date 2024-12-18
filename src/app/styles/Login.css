@@ -58,3 +58,12 @@
     width: 250px;
     border-radius: 0.5rem;
 }
+
+.login-manage{
+    font-weight: 500;
+    margin-top: 1rem;
+    text-decoration: underline;
+}
+.login-manage:hover, .login-submit:hover{
+    cursor: pointer;
+}

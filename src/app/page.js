@@ -5,25 +5,39 @@ import { useContext } from 'react';
 import { GlobalStateContext } from './context/GlobalState';
 import "./styles/Login.css"
 
+
 export default function Login(){
 
-  const { setIsSignedIn, setPatientInfo } = useContext(GlobalStateContext);
+  const { setIsSignedIn, setPatientInfo, patients, setPatients } = useContext(GlobalStateContext);
   
   const router = useRouter()
   
   const [input,setInput] = useState("")
 
-  const [patients, setPatients] = useState([])
+  // const [patients, setPatients] = useState([])
 
-  useEffect(() => {
-    async function fetchPatients() {
-      const response = await fetch("/patient-data.json")
-      const data = await response.json()
-      setPatients(data)
-    }
+  // useEffect(() => {
+  //   async function fetchPatients() {
+  //       try {
+  //           const response = await fetch('/api/patients');
+  //           const data = await response.json();
+  //           setPatients(data);
+  //       } catch (error) {
+  //           console.error("Failed to fetch patients:", error);
+  //       }
+  //   }
+  //   fetchPatients();
+  // }, []);
 
-    fetchPatients()
-  }, [])
+  // useEffect(() => {
+  //   async function fetchPatients() {
+  //     const response = await fetch("/patient-data.json")
+  //     const data = await response.json()
+  //     setPatients(data)
+  //   }
+
+  //   fetchPatients()
+  // }, [])
 
   function handleSubmit(e){
     e.preventDefault()
@@ -54,6 +68,10 @@ export default function Login(){
           />
           <button className="login-submit">Retrieve Info</button>
         </form>
+        <div className="login-manage" onClick={() => router.push("/Manage")}> 
+          Manage Patient
+        </div>
+        {/* {JSON.stringify(patients)} */}
       </div>
     </div>
   )

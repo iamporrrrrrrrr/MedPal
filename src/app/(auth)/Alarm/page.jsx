@@ -9,7 +9,7 @@ import InfoPopUp from '../../components/InfoPopUp'
 
 export default function Alarm(){
 
-    const { time, addMed, patientInfo } = useContext(GlobalStateContext);
+    const { time, patientInfo, setPatientInfo } = useContext(GlobalStateContext);
 
     const router = useRouter()
     
@@ -17,6 +17,20 @@ export default function Alarm(){
         const medAlarm = patientInfo.meds.filter(med => med.info.Take === true);
         if(medAlarm.length) return medAlarm
         return -1
+    }
+
+    function handleTakeMed(){
+        const logMed = patientInfo.meds.filter(med => med.info.Take === true).map(med => ({id: med.id, Time: `${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes()).padStart(2, '0')}`, Name:med.info.Name, Dosage:med.info.Dosage, Type: med.info.Type}));
+        if(logMed.length){
+            setPatientInfo(e => {
+                const updatedMeds = e.meds.map(med => ({
+                id: med.id,
+                info: { ...med.info, Take: false }
+                }));
+                return { ...e, meds: updatedMeds, log: [...logMed,...e.log] };
+            });
+        }
+        router.back()
     }
 
     const [showInfo,setShowInfo] = useState({show:false,info:0})
@@ -40,12 +54,7 @@ export default function Alarm(){
                 })}
                 {findMed()===-1&&"No Pending Medicine"}
             </div>
-            <button onClick={()=> {
-                patientInfo.meds.map(med => {
-                    addMed({...med.info,Take:false})
-                })
-                router.back()
-            }}>I have taken the medicine</button>
+            <button onClick={() => handleTakeMed()}>I have taken the medicine</button>
             {showInfo.show===true && <InfoPopUp info = {showInfo.info} setShowInfo = {setShowInfo}/>}
         </div>
     )

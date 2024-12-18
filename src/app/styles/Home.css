@@ -67,6 +67,7 @@
     background-color: #57A3E0;
     width: 4.375rem;
     height: 4.375rem;
+    padding: 0.5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -179,7 +180,7 @@
     height: 10rem;
 }
 
-.sidebar-img{
+.patient-img{
     border-radius: 50%;
     border: 2px solid #57A3E0;
     background-color: white;

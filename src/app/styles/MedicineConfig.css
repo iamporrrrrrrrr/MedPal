@@ -104,6 +104,7 @@ textarea{
     margin-right: 1rem;
     padding-inline: 0.5rem;
     border-radius: 1.5rem;
+    overflow: hidden;
 }
 
 .dynamic-input>button{
@@ -115,6 +116,8 @@ textarea{
     outline: none;
     background-color: #5294C9;
     border-radius: 1.5rem;
+    /* width: 90px;
+    overflow: hidden; */
     color: white;
 }
 
@@ -134,4 +137,8 @@ textarea{
 
 input[type="time"]::-webkit-calendar-picker-indicator { 
     display: none; 
+}
+
+input[type=time]::-webkit-datetime-edit-ampm-field {
+    display: none;
 }

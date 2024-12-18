@@ -14,7 +14,7 @@ export default function Medicine(){
 
     useEffect(() => {
         const formattedTime = `${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes()).padStart(2, '0')}`;
-        const medAlarm = patientInfo.meds.filter(med => med.info.Time.includes(formattedTime));
+        const medAlarm = patientInfo.meds.filter(med => med.info.Time.includes(formattedTime) && !time.getSeconds());
         medAlarm.map(med => {
             addMed({...med.info, Take:true})
         })
@@ -27,14 +27,14 @@ export default function Medicine(){
         <div className="page medicine-page">
             <div className="med-top">
                 <span>Medicine</span>
-                <button onClick = {() => router.push('/MedicineConfig')}>
-                    <Image src="/assets/plus.svg" alt="" layout="fill" /> 
+                <button onClick = {() => router.push('/MedicineConfig')} className="med-top-button">
+                    <Image src="/assets/plus.svg" alt="" layout="responsive" width={1} height={1} /> 
                 </button> 
             </div>
             <hr/>
             <div className="list-container">
                 {patientInfo.meds.length==0 && "No Pending Medicine"}
-                {patientInfo.meds.map((med,index) => {
+                {(patientInfo.meds.toSorted((a,b)=> a.info.Tube-b.info.Tube)).map((med,index) => {
                     return (
                         <div key = {index}>
                             <div className="list-element" key={med.info.Name}>
@@ -45,7 +45,7 @@ export default function Medicine(){
                                     <button className='delete-btn'
                                         onClick = {() => deleteMed(med.info)}    
                                     >
-                                        <Image src="/assets/trash.svg" alt="" className="trash" layout="fill" /> 
+                                        <Image src="/assets/trash.svg" alt="" className="trash" layout="responsive" width={1} height={1} /> 
                                     </button>
 
                                     <button className="edit-btn"
@@ -54,7 +54,7 @@ export default function Medicine(){
                                             router.push('/MedicineConfig')
                                         }}
                                     >
-                                        <Image src="/assets/right-arrow.svg" alt="" className="right-arrow" layout="fill"/> 
+                                        <Image src="/assets/right-arrow.svg" alt="" className="right-arrow" layout="responsive" width={1} height={1}/> 
                                     </button>
 
                                 </div>
@@ -66,7 +66,7 @@ export default function Medicine(){
             </div>
             <Link href='/Home'>
                 <div className="to-home-container">
-                    <Image src="/assets/home.svg" alt="" className='to-home' layout="fill"/> 
+                    <Image src="/assets/home.svg" alt="" className='to-home' layout="responsive" width={1} height={1}/> 
                 </div>
             </Link>
         </div>

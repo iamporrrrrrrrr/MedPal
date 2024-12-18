@@ -1,0 +1,76 @@
+.patient-info-page{
+    background-color: white;
+    color: #5294C9;
+    padding: 1rem;
+}
+
+.to-home-container{
+    background-color: #57A3E0;
+    width: 4.375rem;
+    height: 4.375rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+.patient-info-header{
+    text-align:center;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.patient-info-img-section{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    position: relative;
+    height: 6rem;
+}
+
+.patient-info-img-container{
+    width: 12rem;
+    height: 12rem;
+    position: absolute;
+    z-index: 10;
+
+}
+
+.patient-info-img{
+    border-radius: 50%;
+    /* border: 8px solid #57A3E0; */
+    border: 8px solid #d9f2ff;
+}
+
+.patient-info-text{
+    font-size: 1.25rem;
+    line-height: 2;
+}
+
+.patient-info-text-container{
+    background-color: #d9f2ff;
+    padding: 6rem 1rem 1rem;
+    height: 100%;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-info-medicalInfo{
+    background-color: #f5fbff;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    
+}
+
+.patient-info-subtext{
+    margin-left: 0.3rem;
+}

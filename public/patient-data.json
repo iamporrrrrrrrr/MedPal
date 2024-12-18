@@ -3,7 +3,7 @@
         "id": "P001",
         "name": "Mr John Smith",
         "dob": "2004-01-02",
-        "sex": "Male",
+        "sex": "M",
         "medicalInfo": "Mild headache",
         "meds": [
             {
@@ -22,13 +22,14 @@
                 }
             }
         ],
-        "emptyTubes": [2, 3, 4, 5, 6, 7, 8]
+        "emptyTubes": [2, 3, 4, 5, 6, 7, 8],
+        "log": []
     },
     {
         "id": "P002",
         "name": "Ms Jane Doe",
         "dob": "2004-01-02",
-        "sex": "Female",
+        "sex": "F",
         "medicalInfo": "Mild headache",
         "meds": [
             {
@@ -77,13 +78,14 @@
                 }
             }
         ],
-        "emptyTubes": [1, 5, 6, 7, 8]
+        "emptyTubes": [1, 5, 6, 7, 8],
+        "log": []
     },
     {
         "id": "P003",
         "name": "Mr Alan Brown",
         "dob": "2004-01-02",
-        "sex": "Male",
+        "sex": "M",
         "medicalInfo": "Mild headache",
         "meds": [
             {
@@ -132,6 +134,7 @@
                 }
             }
         ],
-        "emptyTubes": [4, 5, 6, 7, 8]
+        "emptyTubes": [4, 5, 6, 7, 8],
+        "log": []
     }
 ]

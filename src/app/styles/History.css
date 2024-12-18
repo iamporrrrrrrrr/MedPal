@@ -1,0 +1,67 @@
+.history-page{
+    background-color: #F5F9FF;
+    padding: 1rem;
+}
+
+.history-header{
+    font-size: 1.25rem;
+    color: #607FA3;
+}
+
+.to-home-container{
+    background-color: #57A3E0;
+    width: 4.375rem;
+    height: 4.375rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+.history-list{
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0rem 0.5rem 1.5rem; 
+    display: flex;
+    position: relative;
+    border-radius: 1rem;
+    border-left: 1rem solid;
+    border-color: #4E9DDD;
+    color: #607FA3;
+}
+.history-list-left{
+    display: flex;
+    flex-direction: column;
+    min-width: 60%;
+    max-width: 60%;
+}
+
+.history-list-container{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 0.75rem;
+}
+
+.history-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+.history-list-time{
+    font-size: 3.125rem;
+}
+
+.ver-line{
+    width: 0px;
+    height: 75px;
+    border: 0;
+    border-left: 1px solid #DCDCDC;
+    margin-inline: 0;
+}
+
+  

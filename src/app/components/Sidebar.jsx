@@ -1,7 +1,7 @@
 import { React } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import '../styles/Home.css'
+
 
 
 export default function Sidebar({patientInfo, setOpenSidebar}){
@@ -16,7 +16,7 @@ export default function Sidebar({patientInfo, setOpenSidebar}){
                 </button>
                 <div className="sidebar-img-section">
                     <div className="sidebar-img-container">
-                        <Image src={`/assets/patient-img/${patientInfo.id}.jpg`} alt="" className="sidebar-img"  layout="responsive" width={1} height={1}/>
+                        <Image src={`/assets/patient-img/${patientInfo.sex}.jpg`} alt="" className="patient-img"  layout="responsive" width={1} height={1}/>
                     </div>
                     <div className="sidebar-name">
                         {(patientInfo.name).toUpperCase()}
@@ -28,12 +28,14 @@ export default function Sidebar({patientInfo, setOpenSidebar}){
                         </Link>
                     </div>
                 </div>
-                <div className="sidebar-option">
-                    <div className="sidebar-icon-container">
-                        <Image src="/assets/user-solid-dark.svg" alt="" className="sidebar-icon" layout="responsive" width={1} height={1} />
+                <Link href="/PatientInfo" style={{ textDecoration: 'none' }}>
+                    <div className="sidebar-option">
+                        <div className="sidebar-icon-container">
+                            <Image src="/assets/user-solid-dark.svg" alt="" className="sidebar-icon" layout="responsive" width={1} height={1} />
+                        </div>
+                        Patient Information
                     </div>
-                    Patient Information
-                </div>
+                </Link>
                 <Link href="/Medicine" style={{ textDecoration: 'none' }}>
                     <div className="sidebar-option">
                         <div className="sidebar-icon-container">
@@ -42,12 +44,14 @@ export default function Sidebar({patientInfo, setOpenSidebar}){
                         Medicine Information
                     </div>
                 </Link>
-                <div className="sidebar-option">
-                    <div className="sidebar-icon-container">
-                        <Image src="/assets/history.svg" alt="" className="sidebar-icon" layout="responsive" width={1} height={1}/>
+                <Link href="/History" style={{ textDecoration: 'none' }}>
+                    <div className="sidebar-option">
+                        <div className="sidebar-icon-container">
+                            <Image src="/assets/history.svg" alt="" className="sidebar-icon" layout="responsive" width={1} height={1}/>
+                        </div>
+                        History
                     </div>
-                    History
-                </div>
+                </Link>
             </div>
         </div>
     )
