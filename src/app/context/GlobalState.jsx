@@ -106,7 +106,7 @@ export function GlobalStateProvider({ children }) {
 
   const fetchPatients = async () => {
     try {
-        const response = await fetch('/api/patients');
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/patients`);
         const data = await response.json();
         setPatients(data);
     } catch (error) {
@@ -116,7 +116,7 @@ export function GlobalStateProvider({ children }) {
 
   const handleAddPatient = async () => {
     try {
-        const response = await fetch('/api/patients', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/patients`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ export function GlobalStateProvider({ children }) {
 
 const handleDeletePatient = async (id) => {
   try {
-      const response = await fetch('/api/patients', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/patients`, {
           method: 'DELETE',
           headers: {
               'Content-Type': 'application/json',
@@ -159,7 +159,7 @@ const handleDeletePatient = async (id) => {
 
 const handleUpdatePatient = async (patient) => {
   try {
-      const response = await fetch('/api/patients', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/patients`, {
           method: 'PATCH',
           headers: {
               'Content-Type': 'application/json',
