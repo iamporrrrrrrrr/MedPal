@@ -64,4 +64,13 @@
     margin-inline: 0;
 }
 
-  
+.history-list-container{
+    color: #607FA3;
+}
+
+.history-list-text{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

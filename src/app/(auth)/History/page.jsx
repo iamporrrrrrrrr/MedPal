@@ -34,6 +34,7 @@ export default function History(){
             <div className="history-list-container">
                 {patientInfo.log.length==0 && "No Medicine History"}
                 {patientInfo.log.map(med => {
+                    const medTime = new Date(med.Time)
                     return(
                         <div className='history-list' key= {crypto.randomUUID()}>
                             <div className="history-list-left">
@@ -41,12 +42,12 @@ export default function History(){
                                     {med.Name+" | "+med.Dosage+" "+med.Type+"(s)"} 
                                 </span>
                                 <span className='history-list-time'>
-                                    {med.Time}
+                                    {`${String(medTime.getHours()).padStart(2, '0')}:${String(medTime.getMinutes()).padStart(2, '0')}`}
                                 </span>
                             </div>
                             <hr className='ver-line'/>
                             <div className='history-list-text'>
-                                {med.Date}
+                                {`${String(medTime.getDate()).padStart(2, '0')}/${String(medTime.getMonth()).padStart(2, '0')}/${medTime.getFullYear()}`}
                             </div>   
                         </div> 
                     ) 

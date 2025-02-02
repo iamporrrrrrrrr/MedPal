@@ -20,7 +20,7 @@ export default function Alarm(){
     }
 
     function handleTakeMed(){
-        const logMed = patientInfo.meds.filter(med => med.info.Take === true).map(med => ({id: med.id, Time: `${String(time.getHours()).padStart(2, '0')}:${String(time.getMinutes()).padStart(2, '0')}`, Name:med.info.Name, Dosage:med.info.Dosage, Type: med.info.Type}));
+        const logMed = patientInfo.meds.filter(med => med.info.Take === true).map(med => ({id: med.id, Time: time, Name:med.info.Name, Dosage:med.info.Dosage, Type: med.info.Type}));
         if(logMed.length){
             setPatientInfo(e => {
                 const updatedMeds = e.meds.map(med => ({
